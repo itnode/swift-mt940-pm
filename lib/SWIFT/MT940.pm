@@ -203,6 +203,8 @@ sub read_statement {
 			$statement->{previous_balance} = $self->read_block();
 		} elsif($tag eq "62F") {
 			$statement->{balance} = $self->read_block();
+		} elsif($tag eq "62M") {
+			$statement->{balance} = $self->read_block();
 		} elsif($tag eq "64") {
 			$statement->{valuta_balance} = $self->read_block();
 		} elsif($tag eq "65") {
